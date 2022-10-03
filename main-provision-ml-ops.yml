@@ -1,0 +1,34 @@
+#
+# Pipeline that copies notebook from one workspace to another
+#
+name: mlops_template_$(Build.DefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
+
+trigger:
+ branches:
+   include:
+     - release*
+
+pr:
+  branches:
+    include:
+     - main
+  paths:
+    exclude:
+    - README.md
+
+resources:
+  repositories:
+    - repository: MlApp
+      type: githubenterprise
+      name: gsk-tech/si-template
+      endpoint: GSK GitHub xox87765 OAuth
+      ref: $(Build.SourceBranch)
+    - repository: MlOps
+      type: githubenterprise
+      name: gsk-tech/si-ml-ops
+      endpoint: GSK GitHub xox87765 OAuth
+      ref: main
+
+stages:          
+# Call the stages in the MlOps repo
+    - template: databricks-ml/pipelines/stages/mlops-main-stage.yml@MlOps  # Template reference

@@ -1,0 +1,20 @@
+variables:
+  # model details
+  experiment_name: /experiments/dev-mlops
+  output_path: /dbfs/dev-outputs/
+  model_path: /dbfs/dev-models
+  model_name: wine-dev-quality
+  model_version: 8 #model transition
+
+  # process details
+  unit_test_required: true
+  integration_test_required: false
+  compliance_check_required: false
+
+  # deployment details
+  workspace_url: https://adb-8942861459083889.9.azuredatabricks.net
+  workspace_folder: /databricks-dev-demo
+  notebook_source_location: databricks-ml
+  cluster_id: 0826-103556-l2a55gb4
+  databricks_cli_profile: DEFAULT
+  unit_tests_results_path: dbfs:/tmp/test-reports

@@ -1,0 +1,19 @@
+variables:
+  # model details
+  experiment_name: /experiments/prod-mlops
+  output_path: /dbfs/prod-outputs/
+  model_path: /dbfs/prod-models
+  model_name: wine-quality
+  model_version: '' #model transition
+
+  # process details
+  unit_test_required: false
+  integration_test_required: false
+  compliance_check_required: true
+
+  # deployment details
+  workspace_url: https://adb-282735319526460.0.azuredatabricks.net
+  workspace_folder: /databricks-prod-demo
+  notebook_source_location: databricks-ml
+  cluster_id: 0720-181853-eat842
+  databricks_cli_profile: DEFAULT

@@ -1,0 +1,19 @@
+variables:
+  # model details
+  experiment_name: /my-experiments
+  output_path: /dbfs/uat-outputs/
+  model_path: /dbfs/uat-models
+  model_name: wine-quality
+  model_version: '' #model transition
+
+  # process details
+  unit_test_required: false
+  integration_test_required: false
+  compliance_check_required: false
+
+  # deployment details
+  workspace_url: https://adb-7756356979147229.9.azuredatabricks.net
+  workspace_folder: /databricks-uat-demo
+  notebook_source_location: databricks-ml
+  cluster_id: 0625-152521-touts637
+  databricks_cli_profile: DEFAULT
