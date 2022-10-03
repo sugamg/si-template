@@ -19,14 +19,14 @@ pr:
 resources:
   repositories:
     - repository: MlApp
-      type: githubenterprise
-      name: gsk-tech/si-template
-      endpoint: GSK GitHub xox87765 OAuth
+      type: github
+      name: sugamg/si-template
+      endpoint: MyGit
       ref: $(Build.SourceBranch)
     - repository: MlOps
-      type: githubenterprise
-      name: gsk-tech/si-ml-ops
-      endpoint: GSK GitHub xox87765 OAuth
+      type: github
+      name: sugamg/si-ml-ops
+      endpoint: MyGit
       ref: main
 
 stages:          
