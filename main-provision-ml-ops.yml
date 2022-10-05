@@ -22,7 +22,7 @@ resources:
       type: github
       name: sugamg/si-template
       endpoint: MyGit
-      ref: refs/pull/3/merge
+      ref: refs/pull/4/merge
     - repository: MlOps
       type: github
       name: sugamg/si-ml-ops
