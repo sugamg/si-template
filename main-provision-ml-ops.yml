@@ -7,9 +7,6 @@ trigger:
  branches:
    include:
      - release*
-
-variables:
-# a regular variable
   
 pr:
   branches:
