@@ -27,7 +27,7 @@ resources:
       type: github
       name: sugamg/si-template
       endpoint: MyGit
-      ref: $(reference)
+      ref: $(myvariable)
 
     - repository: MlOps
       type: github
