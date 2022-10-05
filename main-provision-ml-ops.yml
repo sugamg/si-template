@@ -10,8 +10,6 @@ trigger:
 
 variables:
 # a regular variable
-- name: myvariable
-  value: $(Build.SourceBranch)
   
 pr:
   branches:
@@ -27,7 +25,7 @@ resources:
       type: github
       name: sugamg/si-template
       endpoint: MyGit
-      ref: $(myvariable)
+      ref: $(Build.SourceBranchName)
 
     - repository: MlOps
       type: github
