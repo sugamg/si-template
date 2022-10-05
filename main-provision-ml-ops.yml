@@ -8,6 +8,11 @@ trigger:
    include:
      - release*
 
+variables:
+# a regular variable
+- name: myvariable
+  value: $(Build.SourceBranch)
+  
 pr:
   branches:
     include:
@@ -15,9 +20,7 @@ pr:
   paths:
     exclude:
     - README.md
-Variables:
-  - name: reference
-    value: $(Build.SourceBranch)
+
 resources:
   repositories:
     - repository: MlApp
