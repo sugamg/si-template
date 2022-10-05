@@ -15,14 +15,16 @@ pr:
   paths:
     exclude:
     - README.md
-
+Variables:
+  - name: reference
+    value: $(Build.SourceBranch)
 resources:
   repositories:
     - repository: MlApp
       type: github
       name: sugamg/si-template
       endpoint: MyGit
-      ref: $(Build.SourceBranch)
+      ref: $(reference)
 
     - repository: MlOps
       type: github
