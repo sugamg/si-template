@@ -7,7 +7,7 @@ trigger:
  branches:
    include:
      - release*
-
+  
 pr:
   branches:
     include:
@@ -22,7 +22,8 @@ resources:
       type: github
       name: sugamg/si-template
       endpoint: MyGit
-      ref: refs/pull/5/merge
+      ref: $(Build.SourceBranch)
+
     - repository: MlOps
       type: github
       name: sugamg/si-ml-ops
@@ -30,5 +31,5 @@ resources:
       ref: main
 
 stages:          
-# Call the stages in the MlOps repo
+# Call the stages in the MlOps repo 
     - template: databricks-ml/pipelines/stages/mlops-main-stage.yml@MlOps  # Template reference
