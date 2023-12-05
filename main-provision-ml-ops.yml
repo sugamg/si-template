@@ -22,7 +22,7 @@ resources:
       type: github
       name: sugamg/si-template
       endpoint: MyGit
-      ref: main
+      ref: ${{ variables['Build.SourceBranch'] }}
 
     - repository: MlOps
       type: github
@@ -33,3 +33,5 @@ resources:
 stages:          
 # Call the stages in the MlOps repo 
     - template: databricks-ml/pipelines/stages/mlops-main-stage.yml@MlOps  # Template reference
+    
+#comment
